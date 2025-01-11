@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Montserrat", serif;
+    font-optical-sizing: auto;
+}
+
+/* Сброс предустановленных стилей для ссылок */
+a {
+    color: inherit; /* Убираем цвет по умолчанию */
+    text-decoration: none; /* Убираем подчеркивание */
+}
+
+/* Сброс предустановленных стилей для заголовков */
+h1 {
+    margin: 0; /* Убираем отступы */
+    font-size: 1.5em; /* Задаем размер шрифта */
+    font-weight: normal; /* Убираем жирность */
+}

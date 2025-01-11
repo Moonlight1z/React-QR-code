@@ -1,0 +1,26 @@
+$header-bg: #181A1B;
+$color-text: #fff;
+
+.header {
+    background-color: $header-bg;
+    padding: 25px 0;
+}
+
+.header-container {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.navigation-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navigation {
+    display: flex;
+    color: $color-text;
+    list-style: none;
+
+    &__item {}
+}
