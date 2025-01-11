@@ -1,34 +1,46 @@
 import './Header.scss'
 import logo from '../Header/img/logo.svg'
-import createQR from '../Header/img/plus.gif'
-import readQR from '../Header/img/read.gif'
-import storyQR from '../Header/img/history.gif'
+import createQR from '../Header/img/create.png'
+import readQR from '../Header/img/scan.png'
+import storyGenerationQR from '../Header/img/history-generation.png'
+import storyScanQR from '../Header/img/history-scan.png'
+import React, { useState } from 'react';
 
 function Header() {
 
+    const [isOpen, setIsOpen] = useState(false);
+    const toggleMenu = () => {
+        setIsOpen(!isOpen);
+    };
     return (
-        <header className='header'>
+
+        <header className={`header ${isOpen ? 'open' : ''}`}>
             <div className="header-container">
                 <nav className='navigation-box'>
-                    <img src={logo} alt="logo" />
-                    <ul className='navigation'>
-                        <li className='navigation__item'>
-                            <img src={createQR} alt="createQR" width={20} height={20} />
-                            <a href="#">Сгенерировать QR-code</a>
-                        </li>
-                        <li className='navigation__item'>
-                            <img src={readQR} alt="readQR" width={20} height={20} />
-                            <a href="#">Сканировать QR-code</a>
-                        </li>
-                        <li className='navigation__item'>
-                            <img src={storyQR} alt="storyQR" width={20} height={20} />
-                            <a href="#">История сканирования </a>
-                        </li>
-                        <li className='navigation__item'>
-                            <img src={storyQR} alt="storyQR" width={20} height={20} />
-                            <a href="#">История генерирования</a>
-                        </li>
-                    </ul>
+                    <button className="burger-btn" onClick={toggleMenu}>
+                        <span></span><span></span><span></span>
+                    </button>
+                    <a href="#" onClick={(e) => {e.preventDefault();setIsOpen(false);}}>
+                        <img src={logo} alt="logo" />
+                    </a>
+                    <div className='navigation'>
+                        <a href="#" className='navigation__item' onClick={(e) => {e.preventDefault();setIsOpen(false);}}>
+                            <img src={createQR} alt="createQR" width={25} height={25} />
+                            Сгенерировать QR-code
+                        </a>
+                        <a href="#" className='navigation__item' onClick={(e) => {e.preventDefault();setIsOpen(false);}}>
+                            <img src={readQR} alt="readQR" width={25} height={25} />
+                            Сканировать QR-code
+                        </a>
+                        <a href="#" className='navigation__item' onClick={(e) => {e.preventDefault();setIsOpen(false);}}>
+                            <img src={storyGenerationQR} alt="storyQR" width={25} height={25} />
+                            История сканирования
+                        </a>
+                        <a href="#" className='navigation__item' onClick={(e) => {e.preventDefault();setIsOpen(false);}}>
+                            <img src={storyScanQR} alt="storyQR" width={25} height={25} />
+                            История генерирования
+                        </a>
+                    </div>
                 </nav>
             </div>
         </header>
