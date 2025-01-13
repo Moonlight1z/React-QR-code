@@ -24,9 +24,13 @@ function QRcodeGenertor() {
 
     return (
         <div className='container'>
-            <input type="text" value={value} onChange={OnChangeHandler} className="result" placeholder='Введите текст' />
-            <button type='button' onClick={OnClickHandler}>Сгенерировать QR</button>
-            {result !== '' && <QRCodeSVG value={result} size={200} />}
+            <div className='qr-form'>
+                <input className='qr-form__item' type="text" value={value} onChange={OnChangeHandler} placeholder='Введите текст' />
+                <button className='qr-form__btn' type='button' onClick={OnClickHandler}>Сгенерировать QR</button>
+            </div>
+            <div className='qr'>
+                {result !== '' && <QRCodeSVG value={result} size={250} />}
+            </div>
         </div>
     )
 }

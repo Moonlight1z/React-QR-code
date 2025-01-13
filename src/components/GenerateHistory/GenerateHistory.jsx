@@ -5,7 +5,7 @@ function GenerateHistory() {
     const data = JSON.parse(localStorage.getItem(GENERATE_DATA) || '[]');
 
     return (
-        <div>
+        <div className='container'>
             {data.map((text) =>
             (<p key={text}>{text}
                 <QRCodeSVG value={text} size={150} />
