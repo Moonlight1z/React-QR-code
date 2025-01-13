@@ -23,3 +23,8 @@ h1 {
     font-size: 1.5em; /* Задаем размер шрифта */
     font-weight: normal; /* Убираем жирность */
 }
+
+.container{
+    max-width: 1600px;
+    margin: 0 auto;
+}

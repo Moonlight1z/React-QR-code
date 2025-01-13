@@ -2,7 +2,7 @@ import React from 'react';
 
 const Home = () => {
   return (
-    <div>
+    <div className='container'>
       <h1>Домашняя страница</h1>
       {/* Содержимое домашней страницы */}
     </div>
