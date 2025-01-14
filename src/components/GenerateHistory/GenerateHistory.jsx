@@ -11,7 +11,7 @@ function GenerateHistory() {
     const handleDeleteItem = (text) => {
         // Фильтруем массив, оставляя только элементы, которые не равны тексту
         const newData = data.filter(item => item !== text);
-        
+
         // Обновляем состояние и localStorage
         setData(newData);
         localStorage.setItem(GENERATE_DATA, JSON.stringify(newData));
@@ -29,8 +29,16 @@ function GenerateHistory() {
                     </div>
                 ))}
             </div>
+
+            <div className='container'>
+                {data.map((text) =>
+                (<p key={text}>{text}
+                    <QRCodeSVG value={text} size={150} />
+                </p>)
+                )}
+            </div>
         </div>
     );
-}
+};
 
 export default GenerateHistory;
