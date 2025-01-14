@@ -1,8 +1,7 @@
-// GenerateHistory.jsx
 import React from 'react';
 import { QRCodeSVG } from 'qrcode.react';
 import { GENERATE_DATA } from '../../keys';
-import './GenerateHistory.scss'
+import './GenerateHistory.scss';
 import DownloadButton from '../DownloadHistoryButton/DownloadHistoryButton';
 
 function GenerateHistory() {
@@ -13,21 +12,26 @@ function GenerateHistory() {
         setData(storedData);
     }, []);
 
-    const handleDeleteItem = (text) => {
-        const newData = data.filter(item => item !== text);
-        setData(newData);
-        localStorage.setItem(GENERATE_DATA, JSON.stringify(newData));
+    const handleDeleteItem = (itemToDelete) => {
+        // Находим индекс элемента, который нужно удалить
+        const indexToDelete = data.findIndex(item => item === itemToDelete);
+        if (indexToDelete !== -1) {
+            const newData = [...data]; // Создаем копию массива
+            newData.splice(indexToDelete, 1); // Удаляем элемент по индексу
+            setData(newData);
+            localStorage.setItem(GENERATE_DATA, JSON.stringify(newData));
+        }
     };
 
     return (
         <div className="container">
             <div className="generate-history">
-                {data.map((text) => (
-                    <div key={text} className="history-item">
-                        <QRCodeSVG value={text} size={150} />
-                        <p>{text}</p>
-                        <DownloadButton text={text} />
-                        <button onClick={() => handleDeleteItem(text)} className="delete-button">Удалить</button>
+                {data.map((item, index) => (
+                    <div key={`${Date.now()}-${index}`} className="history-item">
+                        <QRCodeSVG value={item} size={150} />
+                        <p>{item}</p>
+                        <DownloadButton text={item} />
+                        <button onClick={() => handleDeleteItem(item)} className="history-btn history-btn_delete">Удалить</button>
                     </div>
                 ))}
             </div>
