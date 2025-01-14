@@ -18,7 +18,6 @@ const DownloadButton = ({ text }) => {
   
   return (
     <div>
-
       <QRCodeCanvas id={`qr-canvas-${text}`} value={text} size={150} style={{display: 'none'}} />
       <button className='history-btn history-btn_download' onClick={downloadQRCode}>Скачать как PNG</button>
     </div>

@@ -29,14 +29,6 @@ function GenerateHistory() {
                     </div>
                 ))}
             </div>
-
-            <div className='container'>
-                {data.map((text) =>
-                (<p key={text}>{text}
-                    <QRCodeSVG value={text} size={150} />
-                </p>)
-                )}
-            </div>
         </div>
     );
 };
