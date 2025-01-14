@@ -41,7 +41,11 @@ $btn-hover: #181A1B;
 
 .qr{
     margin-top: 60px;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
 }
 
 @media (max-width: 1160px) {

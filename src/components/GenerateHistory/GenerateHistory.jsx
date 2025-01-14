@@ -6,13 +6,15 @@ import './GenerateHistory.scss'
 import DownloadButton from '../DownloadHistoryButton/DownloadHistoryButton';
 
 function GenerateHistory() {
-    const [data, setData] = React.useState(JSON.parse(localStorage.getItem(GENERATE_DATA) || '[]'));
+    const [data, setData] = React.useState([]);
+
+    React.useEffect(() => {
+        const storedData = JSON.parse(localStorage.getItem(GENERATE_DATA) || '[]');
+        setData(storedData);
+    }, []);
 
     const handleDeleteItem = (text) => {
-        // Фильтруем массив, оставляя только элементы, которые не равны тексту
         const newData = data.filter(item => item !== text);
-
-        // Обновляем состояние и localStorage
         setData(newData);
         localStorage.setItem(GENERATE_DATA, JSON.stringify(newData));
     };
@@ -25,12 +27,12 @@ function GenerateHistory() {
                         <QRCodeSVG value={text} size={150} />
                         <p>{text}</p>
                         <DownloadButton text={text} />
-                        <button onClick={() => handleDeleteItem(text)} className="history-btn history-btn_delete">Удалить</button>
+                        <button onClick={() => handleDeleteItem(text)} className="delete-button">Удалить</button>
                     </div>
                 ))}
             </div>
         </div>
     );
-};
+}
 
 export default GenerateHistory;
