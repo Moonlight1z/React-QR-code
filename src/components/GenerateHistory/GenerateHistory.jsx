@@ -25,6 +25,7 @@ function GenerateHistory() {
 
     return (
         <div className="container">
+            <h2 className='history-title'>История генерирования QR-кодов</h2>
             <div className="generate-history">
                 {data.map((item, index) => (
                     <div key={`${Date.now()}-${index}`} className="history-item">

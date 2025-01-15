@@ -1,10 +1,12 @@
 import React from 'react';
-
-const Home = () => {
+import './Home.scss';
+function Home() {
   return (
     <div className='container'>
-      <h1>Домашняя страница</h1>
-      {/* Содержимое домашней страницы */}
+      <div className='home-text'>
+        <h1>Домашняя страница</h1>
+        <p>На этом ресурсе Вы можете сканировать или создавать QR-коды, а также загружать их на своё устройство.</p>
+      </div>
     </div>
   );
 };

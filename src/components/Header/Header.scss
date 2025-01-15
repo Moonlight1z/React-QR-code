@@ -8,6 +8,7 @@ $cancel: rgb(226, 21, 21);
     width: 100%;
     background-color: $header-bg;
     padding: 25px 0;
+    z-index: 1;
 
     &.open {
         .burger-btn {

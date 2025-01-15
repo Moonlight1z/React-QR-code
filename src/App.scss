@@ -11,17 +11,15 @@ body{
     font-optical-sizing: auto;
 }
 
-/* Сброс предустановленных стилей для ссылок */
 a {
-    color: inherit; /* Убираем цвет по умолчанию */
-    text-decoration: none; /* Убираем подчеркивание */
+    color: inherit; 
+    text-decoration: none; 
 }
 
-/* Сброс предустановленных стилей для заголовков */
 h1 {
-    margin: 0; /* Убираем отступы */
-    font-size: 1.5em; /* Задаем размер шрифта */
-    font-weight: normal; /* Убираем жирность */
+    margin: 0; 
+    font-size: 1.5em; 
+    font-weight: normal; 
 }
 
 .container{
