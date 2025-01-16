@@ -5,10 +5,10 @@ $btn-hover: #181A1B;
   margin: 0 auto;
 }
 
-.history-title{
+.history-title {
   margin-top: 125px;
   text-align: center;
-  font-weight: normal; 
+  font-weight: normal;
 }
 
 .generate-history {
@@ -82,9 +82,20 @@ $btn-hover: #181A1B;
   .generate-history {
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   }
+
 }
 
-.container {
-    max-width: 1600px;
-    margin: 0 auto;
+@media (max-width: 500px) {
+  .history-title {
+    margin-top: 65px;
+    text-align: center;
+    font-weight: normal;
+  }
+
+  .generate-history {
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
 }

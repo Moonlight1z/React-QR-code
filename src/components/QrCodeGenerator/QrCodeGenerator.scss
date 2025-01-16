@@ -53,3 +53,24 @@ $btn-hover: #181A1B;
         flex-direction: column;
     }
 }
+
+@media (max-width: 500px) {
+    .qr-form{
+        margin-top: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    
+        &__item{
+            height: 50px;
+            width: 80%;
+            padding-left: 25px;
+            font-family: "Montserrat", serif;
+        }
+    }
+    
+    .qr{
+        margin-top: 30px;
+    }
+}
