@@ -17,13 +17,13 @@ function App() {
       <Router>
         <Header />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/generate" element={<QRcodeGenertor />} />
-          <Route path="/scan" element={<QRcodeScanner />} />
-          <Route path="/scan-history" element={<ScanHistory />} />
-          <Route path="/generate-history" element={<GenerateHistory />} />
+          <Route path="/React-QR-code/" element={<Home />} />
+          <Route path="/React-QR-code/generate" element={<QRcodeGenertor />} />
+          <Route path="/React-QR-code/scan" element={<QRcodeScanner />} />
+          <Route path="/React-QR-code/scan-history" element={<ScanHistory />} />
+          <Route path="/React-QR-code/generate-history" element={<GenerateHistory />} />
 
-          <Route path="*" element={<NotFound />} />
+          <Route path="/React-QR-code*" element={<NotFound />} />
         </Routes>
       </Router>
     </>

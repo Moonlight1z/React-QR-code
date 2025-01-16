@@ -20,23 +20,23 @@ function Header() {
             <button className="burger-btn" onClick={toggleMenu}>
               <span></span><span></span><span></span>
             </button>
-            <Link to="/" onClick={() => setIsOpen(false)}>
+            <Link to="/React-QR-code/" onClick={() => setIsOpen(false)}>
               <img src={logo} alt="logo" />
             </Link>
             <div className='navigation'>
-              <Link to="/generate" className='navigation__item' onClick={() => setIsOpen(false)}>
+              <Link to="/React-QR-code/generate" className='navigation__item' onClick={() => setIsOpen(false)}>
                 <img src={createQR} alt="createQR" width={25} height={25} />
                 Сгенерировать QR-code
               </Link>
-              <Link to="/scan" className='navigation__item' onClick={() => setIsOpen(false)}>
+              <Link to="/React-QR-code/scan" className='navigation__item' onClick={() => setIsOpen(false)}>
                 <img src={readQR} alt="readQR" width={25} height={25} />
                 Сканировать QR-code
               </Link>
-              <Link to="/scan-history" className='navigation__item' onClick={() => setIsOpen(false)}>
+              <Link to="/React-QR-code/scan-history" className='navigation__item' onClick={() => setIsOpen(false)}>
                 <img src={storyGenerationQR} alt="storyQR" width={25} height={25} />
                 История сканирования
               </Link>
-              <Link to="/generate-history" className='navigation__item' onClick={() => setIsOpen(false)}>
+              <Link to="/React-QR-code/generate-history" className='navigation__item' onClick={() => setIsOpen(false)}>
                 <img src={storyScanQR} alt="storyQR" width={25} height={25} />
                 История генерирования
               </Link>
