@@ -41,6 +41,7 @@ function QRCodeScanner() {
       <div className="container">
         <div className='qr-scanner'>
           <QrReader
+            constraints={{fasingMode: 'environment'}}
             scanDelay={1000}
             onResult={scanHandler}
             containerStyle={{ width: '380px' }}
