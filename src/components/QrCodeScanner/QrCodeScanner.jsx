@@ -50,7 +50,7 @@ function QRCodeScanner() {
           <p className='result'>Результат сканирования:</p>
           {scanned && (
             <>
-              <p className=''>{scanned}</p>
+              <p>{scanned}</p>
               <img
                 src={copy}
                 alt="copy"
