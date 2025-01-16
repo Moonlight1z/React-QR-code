@@ -13,6 +13,7 @@ $btn-hover: #181A1B;
 
 .generate-history {
   margin-top: 125px;
+  padding-bottom: 25px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 20px;
@@ -94,9 +95,5 @@ $btn-hover: #181A1B;
 
   .generate-history {
     margin-top: 15px;
-    padding-bottom: 25px;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 20px;
   }
 }

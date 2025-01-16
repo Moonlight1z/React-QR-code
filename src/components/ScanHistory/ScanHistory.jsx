@@ -27,7 +27,7 @@ function ScanHistory() {
             <div className="generate-history">
                 {data.map((item, index) => (
                     <div key={`${Date.now()}-${index}`} className="history-item">
-                        <QRCodeSVG value={item} size={150} />
+                        <QRCodeSVG marginSize={1} value={item} size={150} />
                         <p>{item}</p>
                         <DownloadButton text={item} />
                         <button onClick={() => handleDeleteItem(item)} className="history-btn history-btn_delete">Удалить</button>
