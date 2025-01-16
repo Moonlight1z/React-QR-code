@@ -8,7 +8,6 @@ import copy from './img/copy.png'
 function QRCodeScanner() {
   const [scanned, setScanned] = useState('');
   const [copied, setCopied] = useState(false);
-  const [isFrontCamera, setIsFrontCamera] = useState(false); // Состояние для переключения камеры
 
   const scanHandler = (result) => {
     if (!result) return;
@@ -36,23 +35,17 @@ function QRCodeScanner() {
     });
   };
 
-  const toggleCamera = () => {
-    setIsFrontCamera(!isFrontCamera);
-  };
 
   return (
     <div className="container">
       <div className='qr-scanner'>
         <QrReader
-          constraints={{ facingMode: isFrontCamera ? 'user' : 'environment' }} // Переключение между камерами
+          constraints={{ facingMode: 'environment' }}
           scanDelay={1000}
           onResult={scanHandler}
           containerStyle={{ width: '380px' }}
           className='qr-scanner__item'
         />
-        <button onClick={toggleCamera}>
-          Переключить камеру
-        </button>
         <div className='qr-scanner__copy-text'>
           <p className='result'>Результат сканирования:</p>
           {scanned && (
