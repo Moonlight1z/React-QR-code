@@ -13,6 +13,8 @@ function QRCodeScanner() {
       if (!result) return;
   
       const prevData = JSON.parse(localStorage.getItem(SCAN_DATA) || '[]');
+      if (prevData.includes(result.text)) return; // првоекра на значения, которые уже есть в БД
+
       setScanned(result.text);
   
       localStorage.setItem(
