@@ -62,7 +62,7 @@ function QRcodeGenerator() {
             <div className="qr">
                 {result !== '' && (
                     <>
-                        <QRCodeCanvas id="qr-code-canvas" value={result} size={250} />
+                        <QRCodeCanvas marginSize={1} id="qr-code-canvas" value={result} size={250} />
                         <button className='history-btn history-btn_download' onClick={downloadQRCode}>Скачать как PNG</button>
                     </>
                 )}
