@@ -13,6 +13,13 @@ function QRCodeScanner() {
     if (!result) return;
 
     const prevData = JSON.parse(localStorage.getItem(SCAN_DATA) || '[]');
+    // Проверка, был ли уже отсканирован данный QR-код
+    if (prevData.includes(result.text)) {
+      alert('Этот QR-код уже был отсканирован.');
+      return;
+    }
+
+
     setScanned(result.text);
 
     localStorage.setItem(
