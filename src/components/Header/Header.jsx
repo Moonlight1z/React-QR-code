@@ -1,5 +1,6 @@
 import './Header.scss'
-import logo from '../Header/img/logo.svg'
+// import logo from '../Header/img/logo.svg'
+import logo from '../Header/img/logo-up.png'
 import createQR from '../Header/img/create.png'
 import readQR from '../Header/img/scan.png'
 import storyGenerationQR from '../Header/img/history-generation.png'
@@ -21,7 +22,7 @@ function Header() {
               <span></span><span></span><span></span>
             </button>
             <Link to="/React-QR-code/" onClick={() => setIsOpen(false)}>
-              <img src={logo} alt="logo" />
+              <img src={logo} width={80} height={80} alt="logo" />
             </Link>
             <div className='navigation'>
               <Link to="/React-QR-code/generate" className='navigation__item' onClick={() => setIsOpen(false)}>
